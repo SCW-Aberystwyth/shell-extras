@@ -253,7 +253,7 @@ results-2011-11-11.dat              100%  9  1.0 MB/s 00:00
 {: .output}
 
 > ## Choose the right command
-> Which of the following would you use to copy a directory called `data` and all the files and subdirectories contained within it to the /data directory on a remote computer called `datastore.euphoric.edu`:
+> Which of the following would you use to copy a directory called `data` and all the files and subdirectories contained within it to the `/data` directory on a remote computer called `datastore.euphoric.edu`:
 >
 > 1. scp data vlad@datastore.euphoric.edu
 > 2. cp -r data vlad@datastore.euphoric.edu:
