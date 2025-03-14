@@ -162,6 +162,7 @@ $ pwd
 
 > ## Logging into a remote system
 > Open a connection to a remote system you have access to.
+>
 > The first time you connect to a remote computer you will see a message saying that the authenticity of the host can't be established. This is normal and because you've never connected to that computer before, so we have no record of key fingerprint which identifies that computer. If you receive this message on a subsequent connection then it is a sign that the remote computer has been reinstalled or (much less likely) that somebody is interferring with the encryption of your connection. To accept the fingerprint of the remote system you must type "yes".
 > 
 {: .challenge}
