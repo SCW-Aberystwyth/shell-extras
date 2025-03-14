@@ -425,7 +425,8 @@ $ ssh vlad@moon.euphoric.edu
 {: .bash}
 
 > ## Add (or change) a key's passphrase 
-> Add a passphrase your key with the command `ssh-keygen -p`. 
+> Add a passphrase your key with the command `ssh-keygen -p`.
+>
 > Now attempt to login to a remote computer, you should be prompted to enter your passphrase.
 {: .challenge}
 
