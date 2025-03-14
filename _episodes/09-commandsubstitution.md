@@ -26,7 +26,7 @@ set of files, e.g.:
 ~~~
 $ cd data/pdb
 $ mkdir sorted
-$ for file in cyclo*.pdb; do
+$ for file in *cyclo*.pdb; do
 >     sort $file > sorted/sorted-$file
 > done
 ~~~
@@ -39,8 +39,9 @@ This results in the `cyclo*.pdf` being replaced with
 before the loop starts.
 
 Another example is a so-called *parameter sweep*, where you run the same 
-program a number of times with different arguments. Here is a fictitional 
+program a number of times with different arguments. Here is a fictitious 
 example:
+
 
 ~~~
 $ for cutoff in 0.001 0.01 0.05; do

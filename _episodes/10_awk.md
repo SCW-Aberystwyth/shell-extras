@@ -46,7 +46,7 @@ $ awk '{print $0}' example.txt
 {: .bash}
 
 
-This command has the same output of "cat": it prints each line from the example.fasta
+This command has the same output of "cat": it prints each line from the example.txt
 file.
 
 The structure of the instruction is the following:
