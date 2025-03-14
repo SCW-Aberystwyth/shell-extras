@@ -77,8 +77,8 @@ $ awk '{print "chr",$2,$4}' example.txt
 {: .bash}
 
 The comma puts a space between the printed values. Strings of text should be enclosed in
-double quotes. In this case we are printing the text "chr", the second and the fourth column
-for each row in the table.
+double quotes. In this case we are printing the text "chr", the second and the fourth 
+column for each row in the table.
 
 So, $0 is the whole line, $1 the first field, $2 the second and so on. What if we want
 to print the last column, but we don't know its number? Maybe it is a huge table, or maybe
@@ -112,9 +112,9 @@ $ awk -F "," '{print $2}' example2.txt
 ~~~
 {: .bash}
 
-In this case, we are printing the second field in each line, using comma as separator.
-Please notice that the character space is now part of the field value, since it is no
-longer the separator.
+In this case, we are printing the second field in each line, using comma as 
+separator. Please notice that the character space is now part of the field 
+value, since it is no longer the separator.
 
 Awk allows you to specify a matching pattern, like the command grep does.
 
@@ -125,16 +125,17 @@ $ awk '{print $0}' example.pdb
 ~~~
 {: .bash}
 
-It seems an abriged PDB file. If we would like to print only lines starting with the word
-"ATOM", we type:
+It seems an abriged PDB file. If we would like to print only lines starting 
+with the word "ATOM", we type:
 
 ~~~
 awk '/^ATOM/ {print $0}' example.pdb
 ~~~
 {: .bash}
 
-In this case, we specify the pattern before the instructions: only lines starting with the
-text "ATOM". As you remember, ^ means "at the beginning of the line".
+In this case, we specify the pattern before the instructions: only lines 
+starting with the text "ATOM". As you remember, ^ means "at the beginning of 
+the line".
 
 We can specify more that one pattern:
 

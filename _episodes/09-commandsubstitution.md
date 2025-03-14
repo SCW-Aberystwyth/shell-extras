@@ -7,17 +7,21 @@ exercises: 0
 objectives:
 - Understand the need for flexibility regarding arguments
 - Generate the values of the arguments on the fly using command substitution
-- Understand the difference between pipes/redirection, and the command substitution operator
+- Understand the difference between pipes/redirection, and the command 
+substitution operator
 keypoints:
-- We can substitue variables for the output of commands using the $(command) syntax.
+- We can substitue variables for the output of commands using the $(command) 
+syntax.
 - We can loop through sets of values in a "parameter sweep".
-- For loops can take a single variable with space separated arguments and treat each as a separate item to iterate over.
+- For loops can take a single variable with space separated arguments and treat
+ each as a separate item to iterate over.
 ---
 
 ## Introduction
 
-In the *Loops* topic we saw how to improve productivity by letting the computer do the repetitive work.
-Often, this involves doing the same thing to a whole set of files, e.g.:
+In the *Loops* topic we saw how to improve productivity by letting the computer
+ do the repetitive work. Often, this involves doing the same thing to a whole 
+set of files, e.g.:
 
 ~~~
 $ cd data/pdb
@@ -29,12 +33,14 @@ $ for file in cyclo*.pdb; do
 {: .bash}
 
 In this example, the shell generates for us the list of things to loop
-over, using the wildcard mechanism we saw in the *Pipes and Filters* topic. This results in the
-`cyclo*.pdf` being replaced with `cyclobutane.pdb cyclohexanol.pdb
-cyclopropane.pdb ethylcyclohexane.pdb` before the loop starts.
+over, using the wildcard mechanism we saw in the *Pipes and Filters* topic. 
+This results in the `cyclo*.pdf` being replaced with 
+`cyclobutane.pdb cyclohexanol.pdb cyclopropane.pdb ethylcyclohexane.pdb` 
+before the loop starts.
 
-Another example is a so-called *parameter sweep*, where you run the same program a number of times
-with different arguments. Here is a fictitional example:
+Another example is a so-called *parameter sweep*, where you run the same 
+program a number of times with different arguments. Here is a fictitional 
+example:
 
 ~~~
 $ for cutoff in 0.001 0.01 0.05; do
@@ -43,12 +49,13 @@ $ for cutoff in 0.001 0.01 0.05; do
 ~~~
 {: .bash}
 
-In the second example, the things to loop over: `"0.001 0.01 0.05"` are spelled out by you.
+In the second example, the things to loop over: `"0.001 0.01 0.05"` 
+are spelled out by you.
 
 ## Looping over the words in a string
 >
-> In the previous example you can make your code neater and self-documenting by putting the cutoff values
-> in a separate string:
+> In the previous example you can make your code neater and self-documenting by
+> putting the cutoff values in a separate string:
 > ~~~
 > $ cutoffs="0.001 0.01 0.05"
 > $ for cutoff in $cutoffs; do
@@ -56,8 +63,8 @@ In the second example, the things to loop over: `"0.001 0.01 0.05"` are spelled 
 > done
 > ~~~
 > {: .bash}
-> This works because, just as with the filename wildcards, `$cutoffs` is replaced with `0.001 0.01 0.05` 
-> before the loop starts. 
+> This works because, just as with the filename wildcards, `$cutoffs` is 
+> replaced with `0.001 0.01 0.05` before the loop starts. 
 {: .callout}
 
 However, you don't always know in advance *what* you have to loop
@@ -85,7 +92,8 @@ relying on the wildcard mechanism. What we need, therefore, is a
 mechanism that actually replaces everytying beween `[` and `]` with the
 desired names of input files, just before the loop starts.  Thankfully,
 this mechanism exists, and it is called the **command substitution operator**
-(previously written using the **backtick operator**). It looks much like the previous snippet:
+(previously written using the **backtick operator**). It looks much like the 
+previous snippet:
 
 ~~~ 
 # (actual syntax)
@@ -199,9 +207,9 @@ loops.
 > qualitycontrol --inputdir /data/incoming/  --output qcresults-[INSERT TIMESTAMP HERE].txt
 > ~~~
 >
-> Getting `[INSERT TIMESTAMP HERE]` to work is a job for the command subsitution
-> operator. The Unix command you need here is the `date` command, which provides you
-> with the current date and time (try it).
+> Getting `[INSERT TIMESTAMP HERE]` to work is a job for the command 
+> subsitution operator. The Unix command you need here is the `date` 
+> command, which provides you with the current date and time (try it).
 >
 > In the current form, its output is less useful for generating filenames
 > because it contains whitespace (which, as we know from now, should
@@ -237,8 +245,9 @@ loops.
 > $ run_classifier.sh --input patient1048338.txt --pvalue -0.05 --output patient1048338.results
 > ~~~
 >
-> A good trick here is to use the Unix `basename` command. It takes a string (typically a filename),
-> and strips off the given extension (if it is part of the input string). Example:
+> A good trick here is to use the Unix `basename` command. It takes a string 
+> (typically a filename), and strips off the given extension (if it is part 
+> of the input string). Example:
 > ~~~ 
 > $ basename patient1048338.txt    .txt
 > ~~~
