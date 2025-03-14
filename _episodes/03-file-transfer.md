@@ -190,6 +190,6 @@ rsync -a -v -e ssh 03-file-transfer vlad@euphoric.edu:
 {: .bash}
 
 ### Why use rsync instead of scp?
-Rsync only transfers files if they don't exist in the destination directory. This means that if a transfer is stopped for any reason, when you resume it won't copy things that were already copied. Scp does not do this and will start the transfer again. If you are copying large files that take many days/hours there is a chance your transfer might be interrupted at some point and you don't want to have to repeat what you've already done when resuming it.
+Rsync only transfers files (or parts of files) if they don't exist in the destination directory. This means that if a transfer is stopped for any reason, when you resume it won't copy things that were already copied. Scp does not do this and will start the transfer again. If you are copying large files that take many days/hours there is a chance your transfer might be interrupted at some point and you don't want to have to repeat what you've already done when resuming it.
 
 {% include links.md %}
