@@ -261,10 +261,13 @@ results-2011-11-11.dat              100%  9  1.0 MB/s 00:00
 > 4. scp data vlad@datastore.euphoric.edu:
 >
 > > ## Solution
-> > 3 is the correct answer. 
-> > 1 does not have -r option to copy all subdirectories and is missing the : to specify the path on the remote computer. It will create a file called vlad@datastore.euphoric.edu on the local computer.
-> > 2 uses the cp command instead of scp, it will only copy files on the local computer.
-> > 4 is missing the -r option to copy the subdirecotries and doesn't specify /data as the destination path.
+> > 3 is the correct answer.
+> >
+> > 1 does not have `-r` option to copy all subdirectories and is missing the `:` to specify the path on the remote computer. It will create a file called `vlad@datastore.euphoric.edu` on the local computer.
+> >
+> > 2 uses the `cp` command instead of `scp`, it will only copy files on the local computer.
+> >
+> > 4 is missing the `-r` option to copy the subdirectories and doesn't specify `/data` as the destination path.
 > {: .solution}
 {: .challenge}
 
