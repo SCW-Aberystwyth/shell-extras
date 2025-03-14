@@ -175,7 +175,7 @@ $ pwd
 >
 > > ## Solution
 > >
-> > You might find that the prompt has different information and if it displays a host (computer) name then this should be different. This is very important for making sure you know what system you are issuing commands on when in the shell.You might also find the colours are different, especially when running the `ls` command.
+> > You might find that the prompt has different information and if it displays a host (computer) name then this should be different. This is very important for making sure you know what system you are issuing commands on when in the shell. You might also find the colours are different, especially when running the `ls` command.
 > {: .solution}
 {: .challenge}
 
