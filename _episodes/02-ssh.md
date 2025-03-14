@@ -170,6 +170,7 @@ $ pwd
 > ## Differences between remote and local system
 >
 > Open a second terminal window on your local computer. What differences do you see? Are the prompts the same?
+>
 > Run the `ls` command and see if the output style looks the same.
 >
 > > ## Solution
